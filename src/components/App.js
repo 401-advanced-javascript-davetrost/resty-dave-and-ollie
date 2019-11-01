@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Resty from './Resty';
+import Resty from '../containers/Resty';
 import Footer from './Footer';
 
 export default function App() {

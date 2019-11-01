@@ -1,0 +1,6 @@
+.CallForm {
+  input[name="url"] {
+    display: block;
+    width: 80%;
+  }
+}
