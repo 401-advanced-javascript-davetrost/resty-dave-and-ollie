@@ -1,30 +1,20 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import styles from './CallForm.css';
+import propTypes from 'prop-types';
 
 export default class CallForm extends Component {
-  state = {
-
-  }
-
-  // handleSubmit = event => {
-  //   event.preventDefault();
-
-  //   this.setState(state => {
-  //     console.log(state);
-  //   });
-  // }
 
   render() {
     return (
       <form className={styles.CallForm}>
-        <input type="text" name="url" placeholder="URL"></input>
+        <input type="text" name="url" placeholder="URL" onChange={this.props.handleUrlChange}></input>
         <label>
-          <input defaultChecked name="method" type="radio" value="get" />
+          <input defaultChecked name="method" type="radio" value="get" onChange={this.props.handleMethodChange}/>
           <span>GET</span>
         </label>
         <label>
-          <input name="method" type="radio" value="post" />
+          <input name="method" type="radio" value="post"/>
           <span>POST</span>
         </label>
         <label>
@@ -40,7 +30,7 @@ export default class CallForm extends Component {
           <span>DELETE</span>
         </label>
         <label>
-          <button type="submit">Go</button>
+          <button type="submit" onClick={this.props.handleSubmit}>Go</button>
         </label>
 
         <textarea name="requestBody" maxLength="250" minLength="200" placeholder="Raw JSON Body"></textarea>
@@ -49,7 +39,9 @@ export default class CallForm extends Component {
   }
 
   static propTypes = {
-
+    handleUrlChange: propTypes.func.isRequired,
+    handleMethodChange: propTypes.func.isRequired,
+    handleSubmit: propTypes.func.isRequired
   }
 }
 
