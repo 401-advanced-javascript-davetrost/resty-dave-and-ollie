@@ -24,7 +24,7 @@ export default class Resty extends Component {
 
     apiCall(this.state.url)
       .then(response => {
-        this.setState({ response: JSON.stringify(response) });
+        this.setState({ response: JSON.stringify(response, null, 4) });
       });
 
     // if(!existsInHistory(this.state.url, this.state.method)) {

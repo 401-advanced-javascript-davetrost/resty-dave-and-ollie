@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Response({ response }) {
   return (
-    <p>{response}</p>
+    <pre>{response}</pre>
   );
 }
 
