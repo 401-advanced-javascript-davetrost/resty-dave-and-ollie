@@ -14,19 +14,19 @@ export default class CallForm extends Component {
           <span>GET</span>
         </label>
         <label>
-          <input name="method" type="radio" value="post"/>
+          <input name="method" type="radio" value="post" onChange={this.props.handleMethodChange}/>
           <span>POST</span>
         </label>
         <label>
-          <input name="method" type="radio" value="put" />
+          <input name="method" type="radio" value="put" onChange={this.props.handleMethodChange}/>
           <span>PUT</span>
         </label>
         <label>
-          <input name="method" type="radio" value="patch" />
+          <input name="method" type="radio" value="patch" onChange={this.props.handleMethodChange}/>
           <span>PATCH</span>
         </label>
         <label>
-          <input name="method" type="radio" value="delete" />
+          <input name="method" type="radio" value="delete" onChange={this.props.handleMethodChange}/>
           <span>DELETE</span>
         </label>
         <label>

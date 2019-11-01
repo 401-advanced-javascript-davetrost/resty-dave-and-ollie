@@ -1,8 +1,4 @@
-// export default const getApi = (url options) => {
-//   return fetch(``)
-//     .then(res => res.json())
-//     .then(({ results: characters }) => characters.map(character => ({
-//       name: character.name,
-//       image: character.image
-//     })));
-// };
+export const apiCall = (url, method, body) => {
+  return fetch(`${url}`)
+    .then(res => res.json());
+};

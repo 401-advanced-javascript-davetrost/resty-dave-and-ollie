@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HistoryContainer from './HistoryContainer';
 import CallContainer from './CallContainer';
+import { apiCall } from '../services/api-service';
 
 export default class Resty extends Component {
   state = {
@@ -15,21 +16,17 @@ export default class Resty extends Component {
   }
 
   handleMethodChange = ({ target }) => {
-    console.log('changed');
-    
-    this.setState({ method: target.name });
+    this.setState({ method: target.value });
   }
 
   handleSubmit = event => {
     event.preventDefault();
 
-    this.setState(state);
-
-    // api call
-    // .then(response =>
-    //  this.setState(state => {
-    //    response
-    //  });
+    apiCall(this.state.url)
+      .then(response => {
+        console.log(response);
+        this.setState({ response: response });
+      });
 
     // if(!existsInHistory(this.state.url, this.state.method)) {
     //   this.state.history.push();
@@ -41,7 +38,7 @@ export default class Resty extends Component {
     return (
       <>
         <HistoryContainer />
-        <CallContainer handleUrlChange={this.handleUrlChange} handleMethodChange={this.handleMethodChange} handleSubmit={this.handleSubmit}/>
+        <CallContainer handleUrlChange={this.handleUrlChange} handleMethodChange={this.handleMethodChange} handleSubmit={this.handleSubmit} />
       </>
     );
   }
