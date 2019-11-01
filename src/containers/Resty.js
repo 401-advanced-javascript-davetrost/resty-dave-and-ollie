@@ -38,7 +38,12 @@ export default class Resty extends Component {
     return (
       <>
         <HistoryContainer />
-        <CallContainer handleUrlChange={this.handleUrlChange} handleMethodChange={this.handleMethodChange} handleSubmit={this.handleSubmit} />
+        <CallContainer 
+          url={this.state.url} 
+          method={this.state.method} 
+          handleUrlChange={this.handleUrlChange} 
+          handleMethodChange={this.handleMethodChange} 
+          handleSubmit={this.handleSubmit} />
       </>
     );
   }
