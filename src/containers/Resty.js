@@ -24,8 +24,7 @@ export default class Resty extends Component {
 
     apiCall(this.state.url)
       .then(response => {
-        console.log(response);
-        this.setState({ response: response });
+        this.setState({ response: JSON.stringify(response) });
       });
 
     // if(!existsInHistory(this.state.url, this.state.method)) {
@@ -41,6 +40,7 @@ export default class Resty extends Component {
         <CallContainer 
           url={this.state.url} 
           method={this.state.method} 
+          response={this.state.response} 
           handleUrlChange={this.handleUrlChange} 
           handleMethodChange={this.handleMethodChange} 
           handleSubmit={this.handleSubmit} />
