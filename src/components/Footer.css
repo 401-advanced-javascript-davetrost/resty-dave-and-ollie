@@ -1,0 +1,13 @@
+.Footer {
+  color: white;
+  background-color: #14273A;
+  font-family: Verdana;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    text-align: center;
+    font-size: 12px;
+  }
+}
