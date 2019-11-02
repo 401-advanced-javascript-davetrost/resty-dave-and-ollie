@@ -3,4 +3,14 @@
     display: block;
     width: 80%;
   }
+
+  input[name="method"] {
+    display: none;
+  }
+
+  span {
+    font-family: Verdana;
+    font-size: 16px;
+    margin: 5px;
+  }
 }

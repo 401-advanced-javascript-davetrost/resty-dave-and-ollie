@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HistoryItem } from '../components/HistoryItem';
+import styles from './HistoryContainer.css';
 
 export default function HistoryContainer({ items, handleHistorySelect }) {
   const historyItems = items.map(item => (
@@ -11,7 +12,7 @@ export default function HistoryContainer({ items, handleHistorySelect }) {
   ));
 
   return (
-    <section>
+    <section className={styles.HistoryContainer}>
       <h2>History</h2>
       <div>
         {historyItems}
