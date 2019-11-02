@@ -24,6 +24,16 @@ export default class Resty extends Component {
     this.setState({ body: target.value });
   }
 
+  handleHistorySelect = (event, _idFromHistorySelect) => {
+    const callDetails = this.state.history.find(({ _id }) => _id === _idFromHistorySelect);
+    console.log('item selected in history:', callDetails);
+    // this.setState({
+    //   url: callDetails.value, 
+    //   method: callDetails.value,
+    //   body: callDetails.value 
+    // });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
@@ -35,16 +45,27 @@ export default class Resty extends Component {
         console.log(err);
       });
 
-    // if(!existsInHistory(this.state.url, this.state.method)) {
-    //   this.state.history.push();
-    //   this.setState({ history });
-    // }
+    const callFoundInHistory = this.state.history.find(({ method, url, body }) => {
+      return method === this.state.method && url === this.state.url && body === this.state.body;
+    });
+    if(!callFoundInHistory) {
+      const newItem = { 
+        _id: `${this.state.url}${this.state.method.charAt(0)}${this.state.body.replace(' ', '')}`,
+        url: this.state.url,
+        method: this.state.method,
+        body: this.state.body,
+      };
+      this.setState({ history: [...this.state.history, newItem] });
+    }
   }
 
   render() {
     return (
       <>
-        <HistoryContainer />
+        <HistoryContainer 
+          items={this.state.history} 
+          handleHistorySelect={this.handleHistorySelect}
+        />
         <CallContainer 
           url={this.state.url} 
           method={this.state.method} 

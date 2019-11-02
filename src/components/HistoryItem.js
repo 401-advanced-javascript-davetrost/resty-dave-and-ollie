@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const HistoryItem = ({ url, method }) => {
+export const HistoryItem = ({ _id, url, method, handleHistorySelect }) => {
   return (
-    <div>
+    <div onClick={event => handleHistorySelect(event, _id)}>
       <h3>{method}</h3>
       <p>{url}</p>
     </div>
@@ -11,6 +11,9 @@ export const HistoryItem = ({ url, method }) => {
 };
 
 HistoryItem.propTypes = {
+  _id: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  method: PropTypes.string.isRequired
+  method: PropTypes.string.isRequired,
+  body: PropTypes.string,
+  handleHistorySelect: PropTypes.func.isRequired
 };
