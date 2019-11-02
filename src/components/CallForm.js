@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import styles from './CallForm.css';
 import propTypes from 'prop-types';
 
@@ -33,7 +32,7 @@ export default class CallForm extends Component {
           <button type="submit" onClick={this.props.handleSubmit}>Go</button>
         </label>
 
-        <textarea name="requestBody" maxLength="250" minLength="200" placeholder="Raw JSON Body"></textarea>
+        <textarea name="requestBody" value={this.props.body} maxLength="250" minLength="200" placeholder="Raw JSON Body" onChange={this.props.handleBodyChange}></textarea>
       </form>
     );
   }
@@ -41,8 +40,10 @@ export default class CallForm extends Component {
   static propTypes = {
     url: propTypes.string.isRequired,
     method: propTypes.string.isRequired,
+    body: propTypes.string.isRequired,
     handleUrlChange: propTypes.func.isRequired,
     handleMethodChange: propTypes.func.isRequired,
+    handleBodyChange: propTypes.func.isRequired,
     handleSubmit: propTypes.func.isRequired
   }
 }

@@ -8,6 +8,7 @@ export default class Resty extends Component {
     history: [],
     url: '',
     method: 'get',
+    body: '',
     response: ''
   }
 
@@ -19,12 +20,19 @@ export default class Resty extends Component {
     this.setState({ method: target.value });
   }
 
+  handleBodyChange = ({ target }) => {
+    this.setState({ body: target.value });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
-    apiCall(this.state.url)
+    apiCall(this.state.url, this.state.method, this.state.body)
       .then(response => {
         this.setState({ response: JSON.stringify(response, null, 4) });
+      })
+      .catch(err => {
+        console.log(err);
       });
 
     // if(!existsInHistory(this.state.url, this.state.method)) {
@@ -40,9 +48,11 @@ export default class Resty extends Component {
         <CallContainer 
           url={this.state.url} 
           method={this.state.method} 
+          body={this.state.body} 
           response={this.state.response} 
           handleUrlChange={this.handleUrlChange} 
           handleMethodChange={this.handleMethodChange} 
+          handleBodyChange={this.handleBodyChange} 
           handleSubmit={this.handleSubmit} />
       </>
     );
