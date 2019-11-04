@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History Container component renders the container 1`] = `
+<section
+  className="HistoryContainer"
+>
+  <h2>
+    History
+  </h2>
+  <div>
+    <HistoryItem
+      _id="xyzabc"
+      body="{
+      name: 'Garfield',
+      color: 'Orange with black stripes'
+    }"
+      handleHistorySelect={[Function]}
+      key="xyzabc"
+      method="post"
+      url="random-api.com/api/characters"
+    />
+    <HistoryItem
+      _id="xyzabc"
+      body="{
+      name: 'Garfield',
+      color: 'Orange with black stripes'
+    }"
+      handleHistorySelect={[Function]}
+      key="xyzabc"
+      method="post"
+      url="random-api.com/api/characters"
+    />
+  </div>
+</section>
+`;
