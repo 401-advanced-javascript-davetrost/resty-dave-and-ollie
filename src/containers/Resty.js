@@ -26,12 +26,11 @@ export default class Resty extends Component {
 
   handleHistorySelect = (event, _idFromHistorySelect) => {
     const callDetails = this.state.history.find(({ _id }) => _id === _idFromHistorySelect);
-    console.log('item selected in history:', callDetails);
-    // this.setState({
-    //   url: callDetails.value, 
-    //   method: callDetails.value,
-    //   body: callDetails.value 
-    // });
+    this.setState({
+      url: callDetails.url, 
+      method: callDetails.method,
+      body: callDetails.body 
+    });
   }
 
   handleSubmit = event => {
