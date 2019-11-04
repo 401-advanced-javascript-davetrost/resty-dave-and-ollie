@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Call Container component renders the container 1`] = `
+<section>
+  <CallForm
+    body=""
+    handleBodyChange={[Function]}
+    handleMethodChange={[Function]}
+    handleSubmit={[Function]}
+    handleUrlChange={[Function]}
+    method="get"
+    url="random-api.com/api/characters"
+  />
+  <Response
+    response="[
+      {
+        \\"_id\\": \\"5da237699734fdcb7bef8f56\\",
+        \\"name\\": \\"Miles Shortman\\",
+        \\"image\\": \\"https://vignette.wikia.nocookie.net/heyarnold/images/2/2e/Miles.jpg/revision/latest/scale-to-width-down/243?cb=20101115140639\\"
+      }
+    ]"
+  />
+</section>
+`;

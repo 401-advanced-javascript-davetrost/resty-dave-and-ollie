@@ -1,0 +1,14 @@
+.Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #214060;
+  padding: 15px 30px;
+  
+  h1 {
+    color: white;
+    font-family: Verdana;
+    font-size: 32px;
+    font-weight: bolder;
+  }
+}

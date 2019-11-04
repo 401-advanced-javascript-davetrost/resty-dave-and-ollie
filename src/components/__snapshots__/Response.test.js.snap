@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Response component renders a response 1`] = `
+<pre
+  styles="Response"
+>
+  [
+      {
+          "_id": "5da237699734fdcb7bef8f56",
+          "name": "Miles Shortman",
+          "image": "https://vignette.wikia.nocookie.net/heyarnold/images/2/2e/Miles.jpg/revision/latest/scale-to-width-down/243?cb=20101115140639"
+      }
+    ]
+</pre>
+`;
