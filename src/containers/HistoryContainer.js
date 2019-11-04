@@ -23,8 +23,5 @@ export default function HistoryContainer({ items, handleHistorySelect }) {
 
 HistoryContainer.propTypes = {
   items: PropTypes.array.isRequired,
-  // url: PropTypes.string.isRequired,
-  // method: PropTypes.string.isRequired,
-  // body: PropTypes.string.isRequired,
   handleHistorySelect: PropTypes.func.isRequired,
 };
