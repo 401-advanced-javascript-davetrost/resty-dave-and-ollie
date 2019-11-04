@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Response component renders a response 1`] = `
-<pre>
+<pre
+  styles="Response"
+>
   [
       {
           "_id": "5da237699734fdcb7bef8f56",
