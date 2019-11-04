@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallForm Component renders callForm 1`] = `
+<form
+  className="CallForm"
+>
+  <input
+    name="url"
+    onChange={[Function]}
+    placeholder="URL"
+    type="text"
+    value="abc123"
+  />
+  <label>
+    <input
+      checked={true}
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="get"
+    />
+    <span>
+      GET
+    </span>
+  </label>
+  <label>
+    <input
+      checked={false}
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="post"
+    />
+    <span>
+      POST
+    </span>
+  </label>
+  <label>
+    <input
+      checked={false}
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="put"
+    />
+    <span>
+      PUT
+    </span>
+  </label>
+  <label>
+    <input
+      checked={false}
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="patch"
+    />
+    <span>
+      PATCH
+    </span>
+  </label>
+  <label>
+    <input
+      checked={false}
+      name="method"
+      onChange={[Function]}
+      type="radio"
+      value="delete"
+    />
+    <span>
+      DELETE
+    </span>
+  </label>
+  <label>
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Go
+    </button>
+  </label>
+  <textarea
+    maxLength="250"
+    minLength="200"
+    name="requestBody"
+    onChange={[Function]}
+    placeholder="Raw JSON Body"
+    value="heyarnold.com/api/characters"
+  />
+</form>
+`;
