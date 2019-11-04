@@ -8,9 +8,23 @@
     display: none;
   }
 
+  span:hover {
+    background-color: #CCCCCC;
+  }
+
+  span:active {
+    background-clip: #2D5986;
+  }
+
+  input[type=radio]:checked + span {
+    background-color: #2D5986;
+    color: white;
+  }
+
   span {
     font-family: Verdana;
     font-size: 16px;
     margin: 5px;
+    padding: 5px;
   }
 }
