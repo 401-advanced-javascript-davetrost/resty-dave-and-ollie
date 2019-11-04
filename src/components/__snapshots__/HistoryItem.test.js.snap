@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryItem component renders a history item 1`] = `
+<div
+  onClick={[Function]}
+>
+  <h3>
+    get
+  </h3>
+  <p>
+    heyarnold.com/api/characters
+  </p>
+</div>
+`;
+
+exports[`HistoryItem component renders a history item with the body included 1`] = `
+<div
+  onClick={[Function]}
+>
+  <h3>
+    post
+  </h3>
+  <p>
+    random-api.com/api/characters
+  </p>
+</div>
+`;
