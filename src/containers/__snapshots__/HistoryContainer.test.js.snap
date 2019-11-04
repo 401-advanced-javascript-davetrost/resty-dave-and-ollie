@@ -11,9 +11,9 @@ exports[`History Container component renders the container 1`] = `
     <HistoryItem
       _id="xyzabc"
       body="{
-      name: 'Garfield',
-      color: 'Orange with black stripes'
-    }"
+        name: 'Garfield',
+        color: 'Orange with black stripes'
+      }"
       handleHistorySelect={[Function]}
       key="xyzabc"
       method="post"
@@ -22,9 +22,9 @@ exports[`History Container component renders the container 1`] = `
     <HistoryItem
       _id="xyzabc"
       body="{
-      name: 'Garfield',
-      color: 'Orange with black stripes'
-    }"
+        name: 'Garfield',
+        color: 'Orange with black stripes'
+      }"
       handleHistorySelect={[Function]}
       key="xyzabc"
       method="post"
